@@ -146,10 +146,3 @@ function saveAddress() {
 }
 
 //-----------------Tài Khoản
-const user = JSON.parse(localStorage.getItem("loggedInUser"));
-      if (user) {
-        document.getElementById("user-number").textContent =
-          user.number || "Chưa có";
-        document.getElementById("user-address").textContent =
-          user.address || "Chưa nhập";
-      }
