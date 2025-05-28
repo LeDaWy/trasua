@@ -581,7 +581,9 @@ form textarea {
   margin-top: 5px;
 }
 
-form button {
+form a {
+  text-decoration: none;
+  text-align: center;
   margin-top: 20px;
   background-color: #f3a683;
   color: white;
@@ -647,4 +649,32 @@ footer {
   position: relative;
   top: 70px;
   left: 920px;
+}
+/*-----------------Thanks*/
+.camon {
+  background-color: #fff5e1;
+  padding: 30px;
+  max-width: 600px;
+  margin: 40px auto;
+  border-radius: 12px;
+  border: 2px solid #f7d794;
+}
+
+.camon h2 {
+  color: #d35400;
+  margin-bottom: 10px;
+}
+/*===========hình thức thanh toán*/
+.chon {
+  background-color: #fff5e1;
+  padding: 30px;
+  max-width: 600px;
+  margin: 40px auto;
+  border-radius: 12px;
+  border: 2px solid #f7d794;
+}
+
+.chon img {
+  border-radius: 12px;
+  max-width: 250px;
 }
