@@ -142,7 +142,15 @@ function saveAddress() {
   user.address = address;
   localStorage.setItem("loggedInUser", JSON.stringify(user));
 
-  window.location.href = "html.html"; // hoặc trang bạn muốn chuyển đến
+  window.location.href = "index.html"; // hoặc trang bạn muốn chuyển đến
 }
 
 //-----------------Tài Khoản
+const user = JSON.parse(localStorage.getItem("loggedInUser"));
+if (user) {
+  document.getElementById("user-number").textContent = user.number || "Chưa có";
+  document.getElementById("user-address").textContent =
+    user.address || "Chưa nhập";
+} else {
+  document.body.innerHTML = "<p>Chưa đăng nhập</p>";
+}

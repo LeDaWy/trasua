@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trà Sữa DaWy</title>
+    <link rel="stylesheet" href="./css.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!-- Kết nối CSS -->
+  </head>
+  <body>
+    <header>
+      <h1>Trà Sữa DaWy</h1>
+      <p>Thế giới của những ly trà sữa thơm ngon</p>
+    </header>
+    <div class="anhnen">
+      <div class="text-anhnen">
+        <h1>Trải nghiệm trà sữa trân châu cao cấp</h1>
+        <p>
+          Khám phá các loại trà sữa thủ công của chúng tôi được làm từ nguyên
+          liệu tươi và lá trà cao cấp
+        </p>
+      </div>
+    </div>
+    <div class="taikhoan">
+      <a href="dangky.html">Đăng Ký</a>
+      <a href="dangnhap.html">Đăng Nhập</a>
+    </div>
+
+    <div class="menu-icon" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="nav-menu" id="menu">
+      <a href="">Trang Chủ </a>
+      <a href="menu.html">Menu</a>
+      <a href="taikhoan.html">Tài Khoản</a>
+      
+    </div>
+
+    <div class="khuyenmai">
+      <div>
+        <h2>Khuyến mãi <span style="color: red">HOT</span></h2>
+      </div>
+      <div>
+        <p>
+          Mua 3 món đồng giá <span>25.000đ</span> trở lên được tặng 1 phần bánh
+          <span style="color: yellow">Plan</span>
+        </p>
+        <p>
+          Mỗi thứ 3 và chủ nhật khi mua hóa đơn trên <span>200.000đ</span> sẽ
+          được tặng <span style="color: red">1</span> món tự chọn
+        </p>
+        <p>
+          Thứ 2 và thứ 7 <span style="color: yellow">Yogurt</span> đồng giá
+          <span style="color: red">39.000đ</span>
+        </p>
+      </div>
+    </div>
+    <h2 id="id1">Sản Phẩm Nổi Bật</h2>
+    <section class="tieude">
+      <div class="product">
+        <h3>Trà Sữa Lài</h3>
+        <p>Hương thơm của trà lài và ngọt nhẹ của Sữa.</p>
+        <span class="price-new">25,000đ</span>
+        <button class="add-btn" onclick="addToCart('Trà Sữa Lài', 25000)">
+          + Thêm
+        </button>
+      </div>
+
+      <div class="product">
+        <h3>Yogurt Việt Quất</h3>
+        <p>Vị ngọt dịu của Yogurt và chua nhẹ của Việt Quất.</p>
+        <span class="price-new">25,000đ</span>
+        <button class="add-btn" onclick="addToCart('Yogurt Việt Quất', 25000)">
+          + Thêm
+        </button>
+      </div>
+
+      <div class="product">
+        <h3>Matcha Latte</h3>
+        <p>Hương vị thanh mát từ bột trà xanh Nhật Bản.</p>
+        <span class="price-new">30,000đ</span>
+        <button class="add-btn" onclick="addToCart('Mattcha Latte', 30000)">
+          + Thêm
+        </button>
+      </div>
+      <div class="product">
+        <h3>Sữa Bắp</h3>
+        <p>Vị bắp thơm ngon.</p>
+        <span class="price-new">25,000đ</span>
+        <button class="add-btn" onclick="addToCart('Sữa Bắp', 25000)">
+          + Thêm
+        </button>
+      </div>
+      <div class="product">
+        <h3>Sâm Bổ Lượng</h3>
+        <p>Thơm ngon bổ dưỡng từ những loại hạt tốt cho sức khỏe.</p>
+        <span class="price-new">25,000đ</span>
+        <button class="add-btn" onclick="addToCart('Sâm Bổ Lượng', 20000)">
+          + Thêm
+        </button>
+      </div>
+      <div class="product">
+        <h3>Trà Sữa Sầu Riêng</h3>
+        <p>Đậm vị trà và có mùi thơm của Sầu Riêng.</p>
+        <span class="price-new">25,000đ</span>
+        <button class="add-btn" onclick="addToCart('Trà Sữa Sầu Riêng', 25000)">
+          + Thêm
+        </button>
+      </div>
+      <div class="product">
+        <h3>Bánh Plan</h3>
+        <p>Làm từ trứng và sữa tươi thơm ngon.</p>
+        <span class="price-new">10,000đ</span>
+        <button class="add-btn" onclick="addToCart('Bánh Plan', 10000)">
+          + Thêm
+        </button>
+      </div>
+      <div class="product">
+        <h3>Đậu Hủ Singapore</h3>
+        <p>Ủ từ đậu nành nguyên chất núng na núng nính.</p>
+        <span class="price-new">10,000đ</span>
+        <button class="add-btn" onclick="addToCart('Đậu Hủ Singapore', 10000)">
+          + Thêm
+        </button>
+      </div>
+    </section>
+    <button class="cart-toggle" onclick="toggleCart()">
+      🛒 Xem giỏ hàng (<span id="cart-count">0</span>)
+    </button>
+    <div id="cart">
+      <h3>🛍️ Giỏ hàng</h3>
+      <div id="cart-items"></div>
+      <p><strong>Tổng tiền:</strong> <span id="cart-total">0</span> đ</p>
+      <button onclick="goToCheckout()" class="checkout-btn">🧾 Mua ngay</button>
+    </div>
+    <img
+      class="anh-img"
+      src="https://scontent.fsgn2-9.fna.fbcdn.net/v/t39.30808-6/501764706_1847115989478038_1023034282851709443_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeH7-E-_3I68lViE21qaq-62T9vBVZSze99P28FVlLN732UCvNIHsWLK4VtMw7oaVGCQwKvVWlD6nc0rQzVT8r27&_nc_ohc=4g057z6MA58Q7kNvwEnSeBo&_nc_oc=AdmFxAz9KgNbaUxYkD0797ubH1N_k5dOoMJGhIYlOIE53psE6wtQpP_la5ptZb0Jt0Q&_nc_zt=23&_nc_ht=scontent.fsgn2-9.fna&_nc_gid=ldAow8WiC84nwpCynsfXfg&oh=00_AfK1VUXwTcYcoX56e9LFOYWV2rKur-K3BDXWWBjtPtZ5zg&oe=683C8273"
+    />
+    <footer class="lienhe">
+      <p>&copy; 2025 Trà Sữa Ngon.</p>
+      <p>Mọi thắc mắc xin vui lòng liên hệ hotline: 0367270324.</p>
+      <a href="https://www.facebook.com/share/19MXXhdMnc/"
+        >Trang chủ Facebook</a
+      >
+    </footer>
+    <script src="web.js"></script>
+  </body>
+</html>
