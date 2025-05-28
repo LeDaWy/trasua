@@ -152,6 +152,4 @@ const user = JSON.parse(localStorage.getItem("loggedInUser"));
           user.number || "Chưa có";
         document.getElementById("user-address").textContent =
           user.address || "Chưa nhập";
-      } else {
-        document.body.innerHTML = "<p>Chưa đăng nhập</p>";
       }
