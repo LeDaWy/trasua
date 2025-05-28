@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Đăng ký</title>
+    <link rel="stylesheet" href="css.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Trà Sữa DaWy</h1>
+      <p>Thế giới của những ly trà sữa thơm ngon</p>
+    </header>
+    <div class="menu-icon" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="nav-menu" id="menu">
+      <a href="html.html">Trang Chủ </a>
+      <a href="menu.html">Menu</a>
+      <a href="taikhoan.html">Tài Khoản</a>
+     
+    <div class="ttaikhoan">
+      <h2>Thông tin tài khoản</h2>
+      <p><strong>SĐT:</strong> <span id="user-number"></span></p>
+      <p><strong>Địa chỉ:</strong> <span id="user-address"></span></p>
+    </div>
+    <button class="ataikhoan" onclick="window.location.href ='diachi.html'">
+      Thay đổi địa chỉ
+    </button>
+    <script src="web.js"></script>
+  </body>
+</html>

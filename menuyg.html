@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>menuyogurt</title>
+    <link rel="stylesheet" href="css.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Trà Sữa DaWy</h1>
+      <p>Thế giới của những ly trà sữa thơm ngon</p>
+    </header>
+
+    <div class="menu-icon" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="nav-menu" id="menu">
+      <a href="html.html">Trang Chủ</a>
+      <a href="menu.html">Menu</a>
+      <a href="taikhoan.html">Tài Khoản</a>
+      
+    </div>
+
+    <div class="menutong">
+      <a href="menuts.html" class="thanhmenu">Trà sữa</a>
+      <a href="menundt.html" class="thanhmenu">Nước Detox</a>
+      <a href="menuyg.html" class="thanhmenu">Yogurt</a>
+      <a href="menucf.html" class="thanhmenu">Cà phê</a>
+      <a href="menuav.html" class="thanhmenu">Ăn vặt</a>
+    </div>
+
+    <div class="chuwx">
+      <div><h3>MENU Yogurt</h3></div>
+    </div>
+
+    <div class="danhsachsanpham">
+
+        <div class="sanphamm">
+
+        <img
+          src="https://scontent.fsgn5-6.fna.fbcdn.net/v/t39.30808-6/501380918_1847134436142860_2054904124576220171_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeG3cv2mqru70GTmphOf-9w-ZtIuwmTrfJhm0i7CZOt8mE3Vn1q194sAasAjGXnNq9Cg3x_0aoO3p8Pbrcft48G9&_nc_ohc=lG4VQYdq_YcQ7kNvwFylFq5&_nc_oc=AdlPcbHioP45iQ80ZMEAeqwGHPd8QduichXyNVo9CXjx7b84qsc_poI9fUXHmD3tjNg&_nc_zt=23&_nc_ht=scontent.fsgn5-6.fna&_nc_gid=64Pi5ufQKUX3KnOmJOCQFQ&oh=00_AfJrUS7aeyjUQqgwXPUJGizHBa8WMpyVxuibMA9uxI3jBQ&oe=683CBB8C"
+         
+        />
+        
+        <h3 class="title">Yogurt Việt Quất</h3>
+       
+
+        </p>
+        <div class="price-box">
+          <span class="price-new">25,000đ</span>
+          
+        </div>
+        <button class="add-btn" onclick="addToCart('Yogurt Việt Quất', 25000)">+ Thêm</button>
+      </div>
+      <div class="sanphamm">
+
+        <img
+          src="https://scontent.fsgn5-9.fna.fbcdn.net/v/t39.30808-6/497585385_1837832317073072_2226811340016730955_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeF2dMI9tsyG4okAHMH8pyid_VKfGMAWWwz9Up8YwBZbDJ0yNQ7pVK8Ev2yQ8DfyaU8OZwzfQ9p_YfglcPpMudz7&_nc_ohc=93yh2748bCAQ7kNvwFmP_mS&_nc_oc=AdkqHcZT7JVwK9119JUaL0OrFSWG7yY0ulwam0SxrhY6n1zq5u2F7xf8_bIqXk-RGTKS42MhzOzXaPkP4asPWZ48&_nc_zt=23&_nc_ht=scontent.fsgn5-9.fna&_nc_gid=RRtcp0FVAcogmtuQoHBGFw&oh=00_AfKlDpwYJC_peQ3c2FALnH1uqS57vEY_PoYXeHFTYROa2A&oe=682BFB1C"
+         
+        />
+        
+        <h3 class="title">Yogurt Chanh Giây</h3>
+       
+
+        </p>
+        <div class="price-box">
+          <span class="price-new">25,000đ</span>
+          
+        </div>
+        <button class="add-btn" onclick="addToCart('Yogurt Chanh Giây', 25000)">+ Thêm</button>
+      </div>
+    </div>
+
+<button class="cart-toggle" onclick="toggleCart()">
+      🛒 Xem giỏ hàng (<span id="cart-count">0</span>)
+    </button>  
+<div id="cart">
+  <h3>🛍️ Giỏ hàng</h3>
+  <div id="cart-items"></div>
+  <p><strong>Tổng tiền:</strong> <span id="cart-total">0</span> đ</p>
+  <button onclick="goToCheckout()" class="checkout-btn">🧾 Mua ngay</button>
+</div>
+
+    <footer class="lienhe">
+      <p>&copy; 2025 Trà Sữa Ngon.</p>
+      <p>Mọi thắc mắc xin vui lòng liên hệ hotline: 0367270324.</p>
+      <a href="https://www.facebook.com/share/19MXXhdMnc/"
+        >Trang chủ Facebook</a
+      >
+    </footer>
+    <script src="web.js"></script>
+  </body>
+</html>

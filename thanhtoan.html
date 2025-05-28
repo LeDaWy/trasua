@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thanh Toán - Trà Sữa DaWy</title>
+    <link rel="stylesheet" href="css.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Trà Sữa DaWy</h1>
+      <p>Trang Thanh Toán</p>
+    </header>
+    <div class="menu-icon" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="nav-menu" id="menu">
+      <a href="html.html">Trang Chủ </a>
+      <a href="menu.html">Menu</a>
+      <a href="taikhoan.html">Tài Khoản</a>
+    </div>
+
+    <main class="checkout-container">
+      <h2>Thông tin đơn hàng</h2>
+      <div id="order-summary"></div>
+      <p><strong>Tổng cộng:</strong> <span id="total-amount">0</span> đ</p>
+
+      <h2>Thông tin khách hàng</h2>
+      <form id="checkout-form">
+        <label>Họ và tên:</label>
+        <input type="text" required />
+
+        <p><strong>SĐT:</strong> <span id="user-number"></span></p>
+        <p><strong>Địa chỉ:</strong> <span id="user-address"></span></p>
+
+        <label>Ghi chú:</label>
+        <textarea required></textarea>
+        <button type="submit">Xác nhận đặt hàng</button>
+      </form>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Trà Sữa Ngon</p>
+    </footer>
+    <script src="web.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        if (window.location.pathname.includes("thanhtoan.html")) {
+          const cart = JSON.parse(localStorage.getItem("cart")) || [];
+          const summary = document.getElementById("order-summary");
+          const total = document.getElementById("total-amount");
+
+          if (!summary || !total) return;
+
+          let totalAmount = 0;
+
+          summary.innerHTML = cart
+            .map((item) => {
+              const itemTotal = item.price * item.quantity;
+              totalAmount += itemTotal;
+              return `<p>${item.name} x${
+                item.quantity
+              } - ${itemTotal.toLocaleString()} đ</p>`;
+            })
+            .join("");
+
+          total.textContent = totalAmount.toLocaleString();
+        }
+      });
+    </script>
+  </body>
+</html>
